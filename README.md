@@ -72,28 +72,25 @@ pip install opencv-python face-recognition cvzone numpy requests
 ### 3. Project Structure
 Ensure your directory looks like this:
 
-📂 Project_Root
- ├── 📂 Images            # Place student photos here (filename = student_id.png)
- ├── 📂 Resources         # Background graphics and mode icons
- │    ├── background.png
- │    └── 📂 Modes
- ├── AddDatatoDatabse.py
- ├── EncodeGenerator.py
- ├── main.py
- └── EncodeFile.p         # Generated automatically
+📂 Project_Root<br>
+ ├── 📂 Images            # Place student photos here (filename = student_id.png)<br>
+ ├── 📂 Resources         # Background graphics and mode icons<br>
+ │    ├── background.png<br>
+ │    └── 📂 Modes<br>
+ ├── AddDatatoDatabse.py<br>
+ ├── EncodeGenerator.py<br>
+ ├── main.py<br>
+ └── EncodeFile.p         # Generated automatically<br>
 ### 4. Run the Modules
 Step A: Upload Data Edit AddDatatoDatabse.py with your student data and run it to populate the database.
 ```
-Bash
 python AddDatatoDatabse.py
 ```
 Step B: Process Images Put student images in the Images folder (e.g., 321654.png). Run the generator to encode faces and upload images to cloud storage.
 ```
-Bash
 python EncodeGenerator.py
 ```
 Step C: Start System Launch the main recognition engine.
 ```
-Bash
 python main.py
 ```
