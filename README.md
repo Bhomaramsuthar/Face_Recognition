@@ -59,5 +59,41 @@ The project is divided into three distinct modules:
 ## 🚀 Setup & Installation
 
 ### 1. Install Dependencies
-```bash
+``` bash
 pip install opencv-python face-recognition cvzone numpy requests
+```
+(Note: face-recognition requires dlib, which relies on CMake. Ensure C++ build tools are installed on your machine.)
+
+### 2. Configure Supabase
+- Create a project on Supabase.
+- Create a table named students and a storage bucket named images.
+- Copy your SUPABASE_URL and API_KEY (Service Role for writing, Anon for reading).
+
+### 3. Project Structure
+Ensure your directory looks like this:
+
+📂 Project_Root
+ ├── 📂 Images            # Place student photos here (filename = student_id.png)
+ ├── 📂 Resources         # Background graphics and mode icons
+ │    ├── background.png
+ │    └── 📂 Modes
+ ├── AddDatatoDatabse.py
+ ├── EncodeGenerator.py
+ ├── main.py
+ └── EncodeFile.p         # Generated automatically
+### 4. Run the Modules
+Step A: Upload Data Edit AddDatatoDatabse.py with your student data and run it to populate the database.
+```
+Bash
+python AddDatatoDatabse.py
+```
+Step B: Process Images Put student images in the Images folder (e.g., 321654.png). Run the generator to encode faces and upload images to cloud storage.
+```
+Bash
+python EncodeGenerator.py
+```
+Step C: Start System Launch the main recognition engine.
+```
+Bash
+python main.py
+```
